@@ -11,7 +11,7 @@ let db
 
 connectToDb((err) => {
     if (!err) {
-        app.listen(PORT, (err) => {
+        app.listen(PORT || 9001, (err) => {
             err ? console.log(err) : console.log('Server start')
         })
         db = getDb()
